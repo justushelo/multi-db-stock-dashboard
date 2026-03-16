@@ -1,0 +1,45 @@
+[project]
+name = "stock-dashboard"
+version = "0.1.0"
+description = "A Streamlit stock dashboard with a multi-database architecture."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit==1.31.0",
+    "pandas==2.2.0",
+    "SQLAlchemy==2.0.25",
+    "pymongo==4.6.1",
+    "psycopg2-binary==2.9.9",
+    "plotly==5.18.0",
+    "yfinance==0.2.36",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff",
+    "ty",
+]
+
+[tool.ruff]
+# Set the maximum line length to 88.
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black/ruff format
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]

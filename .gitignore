@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit secrets (VERY IMPORTANT to ignore!)
+.streamlit/secrets.toml
+
+# Databases and data files
+*.db
+*.sqlite
+*.sqlite3
+assignment3.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
